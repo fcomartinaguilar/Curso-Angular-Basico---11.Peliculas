@@ -1,0 +1,28 @@
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">PeliculasApp</h1>
+    <p class="lead">Aplicacion para peliculas</p>
+  </div>
+</div>
+
+<div class="container">
+  <br>
+
+  <app-galeria 
+          [peliculas]="cartelera|slice:0:6"
+          <!-- titulo no lo pongo entre corchetes porq no va bindeado con el ts, va a piñon el texto desde aqui -->
+          titulo="Peliculas en cartelera">
+  </app-galeria>
+
+  <app-galeria 
+          [peliculas]="popularesNinos|slice:0:6"
+          <!-- titulo no lo pongo entre corchetes porq no va bindeado con el ts, va a piñon el texto desde aqui -->
+          titulo="Peliculas mas Populares">
+  </app-galeria>
+
+  <app-galeria 
+          [peliculas]="cartelera|slice:0:6"
+          <!-- titulo no lo pongo entre corchetes porq no va bindeado con el ts, va a piñon el texto desde aqui -->
+          titulo="Peliculas populares de Niños">
+  </app-galeria>
+</div>

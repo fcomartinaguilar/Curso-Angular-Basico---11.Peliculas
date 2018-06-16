@@ -1,0 +1,59 @@
+  {{titulo}}
+
+<div class="row animated fadeIn mt2" *ngIf="peliculas" >
+  <div class="col-sm-6">
+    <div class="row">
+      <div class="col-md-12 div-pic-1 puntero" 
+            [ngStyle]="{ 'background-image' : 'url ( ' + (peliculas[0] | peliculaImagen ) + ' )' }"
+            [routerLink]="['/pelicula', peliculas[0], 'home']">
+        <p class="pic-titulo">
+          {{ peliculas[0].original_title }}
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6 div-pic-2 puntero" 
+            [ngStyle]="{ 'background-image' : 'url ( ' + (peliculas[1] | peliculaImagen ) + ' )' }"
+            [routerLink]="['/pelicula', peliculas[1], 'home']">
+            <p class="pic-titulo">
+                {{ peliculas[1].original_title }}
+              </p>
+      </div>
+      <div class="col-sm-6 div-pic-2 puntero" 
+            [ngStyle]="{ 'background-image' : 'url ( ' + (peliculas[2] | peliculaImagen ) + ' )' }"
+            [routerLink]="['/pelicula', peliculas[2], 'home']">
+            <p class="pic-titulo">
+                {{ peliculas[2].original_title }}
+              </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-6">
+    <div class="row">
+      <div class="col-sm-6 div-pic-2 puntero" 
+            [ngStyle]="{ 'background-image' : 'url ( ' + (peliculas[3] | peliculaImagen ) + ' )' }"
+            [routerLink]="['/pelicula', peliculas[3], 'home']">
+            <p class="pic-titulo">
+                {{ peliculas[3].original_title }}
+              </p>
+      </div>
+      <div class="col-sm-6 div-pic-2 puntero" 
+            [ngStyle]="{ 'background-image' : 'url ( ' + (peliculas[4] | peliculaImagen ) + ' )' }"
+            [routerLink]="['/pelicula', peliculas[4], 'home']">
+            <p class="pic-titulo">
+                {{ peliculas[4].original_title }}
+              </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 div-pic-1 puntero" 
+            [ngStyle]="{ 'background-image' : 'url ( ' + (peliculas[5] | peliculaImagen ) + ' )' }"
+            [routerLink]="['/pelicula', peliculas[5], 'home']">
+            <p class="pic-titulo">
+                {{ peliculas[5].original_title }}
+              </p>
+      </div>
+    </div>
+  </div>
+</div>
